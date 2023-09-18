@@ -3,7 +3,7 @@
  * Plugin Name: Exclude Tag from RSS Feed
  * Plugin URI: https://github.com/megmorsie/rose-exclude-tag-from-rss
  * Description: In order to protect our authors from potential exposure beyond our chapter (ie via the public RSS feed, which National also uses), this plugin will exclude all posts with a specific tag from the feed.
- * Version: 0.1
+ * Version: 1.0
  * Author: Megan Rose
  * Author URI: https://megabyterose.com/
  * Text Domain: rose-exclude-tag-from-rss
