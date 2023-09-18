@@ -16,7 +16,7 @@
  * The number below should be the ID of the "no-rss" tag.
  */
 
-$exclude_tag_id = 15;
+$exclude_tag_id = 36;
 
 /**
  * Exclude tag with matching ID from RSS feed.
