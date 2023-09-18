@@ -83,11 +83,9 @@ add_action('parse_query', 'rose_exclude_tag_parse_query');
 function rose_noindex_tag_page($robots) {
 	global $exclude_tag_id;
 
-	if ( !is_tag($exclude_tag_id) ) {
-		return $robots;
-	} else {
+	if ( is_tag($exclude_tag_id) ) {
 		$robots['nofollow'] = true;
-		return $robots;
 	}
+	return $robots;
 }
 add_filter('wp_robots', 'rose_noindex_tag_page');
