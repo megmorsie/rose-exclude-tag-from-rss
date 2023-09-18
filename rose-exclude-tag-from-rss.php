@@ -80,7 +80,7 @@ add_action( 'parse_query', 'rose_exclude_tag_parse_query' );
  * Disallow search engines from indexing our excluded tag page.
  */
 
-function rose_noindex_tag_page( array $robots ) {
+function rose_noindex_tag_page( $robots ) {
 	global $exclude_tag_id;
 
 	if ( !is_tag($exclude_tag_id) ) {
