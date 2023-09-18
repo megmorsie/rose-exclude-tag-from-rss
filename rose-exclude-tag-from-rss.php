@@ -24,6 +24,7 @@ $exclude_tag_id = 36;
 
 function rose_exclude_tag_from_rss($query) {
 	global $exclude_tag_id;
+
 	if ( ($query->is_feed) && (!is_admin()) ) {
 		$query->set('tag__not_in', $exclude_tag_id); 
 	}
@@ -38,6 +39,7 @@ add_filter('pre_get_posts', 'rose_exclude_tag_from_rss');
 
 function rose_exclude_tag_from_tags_list($terms) {
 	global $exclude_tag_id;
+
 	if ($terms == null) {
 		return;
 	}
@@ -70,8 +72,8 @@ function rose_exclude_tag_parse_query( $query ){
 	} else {
 		$redirect_to = home_url('/category/blog');
 	}
-    wp_redirect( $redirect_to );
-    exit;
+	wp_redirect( $redirect_to );
+	exit;
 }
 add_action( 'parse_query', 'rose_exclude_tag_parse_query' );
 
