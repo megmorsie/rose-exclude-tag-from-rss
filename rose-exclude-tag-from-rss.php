@@ -52,3 +52,26 @@ function rose_exclude_tag_from_tags_list($terms) {
 	return $terms;
 } 
 add_filter('get_the_tags', 'rose_exclude_tag_from_tags_list');
+
+/**
+ * Redirect tag page (ie /tag/slug).
+ */
+
+function rose_exclude_tag_parse_query( $query ){
+	global $exclude_tag_id;
+	
+	if ( !is_tag($exclude_tag_id) ) {
+		return;
+	}
+
+	$redirect_to = '';
+	if ( get_option('page_for_posts') ) {
+		$redirect_to = get_permalink( get_option('page_for_posts') );
+	} else {
+		$redirect_to = home_url('/category/blog');
+	}
+    wp_redirect( $redirect_to );
+    exit;
+}
+add_action( 'parse_query', 'rose_exclude_tag_parse_query' );
+
