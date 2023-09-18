@@ -58,7 +58,7 @@ add_filter('get_the_tags', 'rose_exclude_tag_from_tags_list');
  * Redirect tag page (ie /tag/slug).
  */
 
-function rose_exclude_tag_parse_query( $query ){
+function rose_exclude_tag_parse_query($query){
 	global $exclude_tag_id;
 
 	if ( !is_tag($exclude_tag_id) ) {
@@ -71,16 +71,16 @@ function rose_exclude_tag_parse_query( $query ){
 	} else {
 		$redirect_to = home_url('/category/blog');
 	}
-	wp_redirect( $redirect_to );
+	wp_redirect($redirect_to);
 	exit;
 }
-add_action( 'parse_query', 'rose_exclude_tag_parse_query' );
+add_action('parse_query', 'rose_exclude_tag_parse_query');
 
 /**
  * Disallow search engines from indexing our excluded tag page.
  */
 
-function rose_noindex_tag_page( $robots ) {
+function rose_noindex_tag_page($robots) {
 	global $exclude_tag_id;
 
 	if ( !is_tag($exclude_tag_id) ) {
@@ -90,4 +90,4 @@ function rose_noindex_tag_page( $robots ) {
 		return $robots;
 	}
 }
-add_filter( 'wp_robots', 'rose_noindex_tag_page' );
+add_filter('wp_robots', 'rose_noindex_tag_page');
