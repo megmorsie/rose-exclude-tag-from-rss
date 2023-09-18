@@ -7,7 +7,7 @@
 3. Open the **`rose-exclude-tag-from-rss.php` file in a text editor** (Notepad, TextEdit, Sublime Text, PHPStorm, etc - NOT a word processor).
 4. Ensure the number on this line: `$exclude_tag_id = 36;` matches **your tag ID** from step 2. If they do not match, update both references, being mindful to only replace the number itself, not removing any other characters from that line as it will cause a 500 error (AKA "whitescreen") on the website when activated if there are any missing characters. 🙂
 5. Always **test locally** or on a staging environment before "pushing" to the production server. If you aren't a coder, please have someone who is double-check your work!
-6. After testing, you can **install the plugin like any other plugin**! - Zip the folder and upload it via wp-admin, then Activate, or upload the plugin directory via SFTP to the `/plugins` directory. (Be *extremely* careful if you are using a GUI to interact via SFTP as it is easy to accidentally move folders with the cursor.)
+6. After testing, you can **install the plugin like any other plugin**! - Zip the folder and upload it via `/wp-admin`, then activate it. Alternatively, you can upload the plugin directory via SFTP to the `/plugins` directory and then activate it via `/wp-admin` but this is not preferred. (Be *extremely* careful if you are using a GUI to interact via SFTP as it is easy to accidentally move folders with the cursor.)
 
 ## Maintenance & Troubleshooting
 
