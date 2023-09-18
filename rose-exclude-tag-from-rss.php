@@ -25,7 +25,7 @@ $exclude_tag_id = 36;
 function rose_exclude_tag_from_rss($query) {
 	global $exclude_tag_id;
 
-	if ( ($query->is_feed) && (!is_admin()) ) {
+	if ($query->is_feed) {
 		$query->set('tag__not_in', $exclude_tag_id); 
 	}
 	return $query;
