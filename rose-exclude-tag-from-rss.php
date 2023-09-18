@@ -19,7 +19,7 @@
 $exclude_tag_id = 15;
 
 /**
- * Exclude tag with ID 15 from RSS feed.
+ * Exclude tag with matching ID from RSS feed.
  */
 
 function rose_exclude_tag_from_rss($query) {
@@ -32,7 +32,7 @@ function rose_exclude_tag_from_rss($query) {
 add_filter('pre_get_posts', 'rose_exclude_tag_from_rss');
 
 /**
- * Exclude tag with ID 15's tag listing on front end.
+ * Exclude tag with matching ID's listing on front end.
  * (Only relevant if the currently active theme displays tags on the front end.)
  */
 
