@@ -13,4 +13,4 @@
 
 This plugin has been tested with WordPress version **6.1.3** on a server running PHP **8.0.8**. It's dependent on the WordPress core filter `pre_get_posts` and the `WP_Query` class, which are central to how WordPress works. It would be extremely unlikely that these features would be deprecated.
 
-The only thing that would need updated in the future would be **if the corresponding tag is deleted and recreated**. If this happens, someone should replace the tag ID in the main plugin file referenced above. (Ideal process would be to remove the plugin from `/wp-admin`, make the edits and test locally, then reupload the zip of the directory via `wp-admin/` and activate the plugin again.)
+The only thing that would need updated in the future would be **if the corresponding tag is deleted and recreated**. If this happens, someone should replace the tag ID in the main plugin file referenced above. (Ideal process would be to remove the plugin from `/wp-admin`, make the edits and test locally, then reupload the zip of the directory via `/wp-admin` and activate the plugin again.)
