@@ -45,7 +45,6 @@ function rose_exclude_tag_from_tags_list($terms) {
 	}
 	
 	foreach ($terms as $t => $tag) {
-		// The number on the next line should be the ID of the "no-rss" tag.
 		if ($tag->term_id == $exclude_tag_id) { 
 			unset($terms[$t]);
 		}
